@@ -36,4 +36,3 @@ def f_drelu(arg) -> 'Derivative of RELU of input argument':
 
     return(1 if arg > 0  else 0)
 
-f_drelu(100)
