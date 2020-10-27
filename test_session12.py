@@ -25,7 +25,7 @@ def test_readme_file_for_formatting():
 
 def test_sin():
 
-    assert math.sin(3.14 // 2) == calculator.sin(3.14 // 2)
+    assert calculator.f_sin(math.pi/ 2) == f'Result of function sin({math.pi/2}) = 1.0'
 
 
 def test_cos():
