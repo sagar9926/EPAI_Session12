@@ -35,4 +35,3 @@ def f_dsigmoid(arg) -> 'Derivative of Sigmoid of input argument':
     """
     sig = f_sigmoid(arg)
     return(sig*(1 - sig))
-f_dsigmoid(2)
