@@ -45,11 +45,11 @@ def test_log():
 
 
 def test_exp():
-    assert calculator.f_exp(1) == f'Result of function log({1}) = {math.exp(1)}'
+    assert calculator.f_exp(1) == f'Result of function exp({1}) = {math.exp(1)}'
 
 
 def test_sigmoid():
-    assert calculator.f_sigmoid(2) == f'Result of function sigmoid({2}) = {1 / (1 + math.exp(-10))}'
+    assert calculator.f_sigmoid(2) == f'Result of function sigmoid({2}) = {1 / (1 + math.exp(-2))}'
 """
 
 def test_relu():
