@@ -66,26 +66,19 @@ def test_cos_d():
 def test_tan_d():
     assert derivatives.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {(1 + math.tan(math.pi / 4)**2)}'
 
-"""
 def test_tanh_d():
-    assert 1-(math.tanh(3.14 // 2)**2) == derivatives.tanh_d(3.14 // 2)
+    assert derivatives.f_dtanh(math.pi/ 4) == f'Result of function dtanh({math.pi/4}) = {1-(math.tanh(math.pi / 4)**2)}'
 
-
+  
 def test_log_d():
-    assert 1 == derivatives.log_d(1)
+    assert derivatives.f_dlog(1) == f'Result of function dtanh({1}) = {1}'
 
 
 def test_exp_d():
-    assert math.exp(10) == derivatives.exp_d(10)
-
-
-def test_sigmoid_d():
-    x=10
-    assert calculator.sigmoid(x)*(1-calculator.sigmoid(x)) == derivatives.sigmoid_d(x)
+    assert derivatives.f_dexp(10) == f'Result of function dexp({10}) = {math.exp(10)}'
 
 
 def test_relu_d():
-    assert 0 == derivatives.relu_d(-10)
-    assert 1 == derivatives.relu_d(10000)
-
-"""
+    derivatives.f_drelu(-10) == f'Result of function drelu({-10}) = {0}'
+    derivatives.f_drelu(10) == f'Result of function drelu({10}) = {1}'
+   
