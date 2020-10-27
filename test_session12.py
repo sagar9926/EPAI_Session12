@@ -64,7 +64,7 @@ def test_cos_d():
 
 
 def test_tan_d():
-    assert derivatives.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {math.sec(math.pi / 4)**2}'
+    assert derivatives.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {(1 + math.tan(math.pi / 4)**2)}'
 
 """
 def test_tanh_d():
