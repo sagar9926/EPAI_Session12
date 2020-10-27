@@ -71,7 +71,7 @@ def test_tanh_d():
 
   
 def test_log_d():
-    assert derivatives.f_dlog(1) == f'Result of function dtanh({1}) = {1}'
+    assert derivatives.f_dlog(1) == f'Result of function dlog({1}) = {1}'
 
 
 def test_exp_d():
