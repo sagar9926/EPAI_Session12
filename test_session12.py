@@ -14,12 +14,12 @@ def test_readme_exists():
 
 def test_readme_contents():
     readme_words = [word for line in open("README.md", "r") for word in line]
-    assert len(readme_words) >= 500, "Say more in the README. please....."
+    assert len(readme_words) >= 100, "Say more in the README. please....."
 
 
 def test_readme_file_for_formatting():
     f = open("README.md", "r")
-    content = f.rea_d()
+    content = f.read()
     f.close()
     assert content.count("#") >= 10
 
