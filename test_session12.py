@@ -50,25 +50,23 @@ def test_exp():
 
 def test_sigmoid():
     assert calculator.f_sigmoid(2) == f'Result of function sigmoid({2}) = {1 / (1 + math.exp(-2))}'
-"""
 
 def test_relu():
-    assert max(0, -10) == calculator.relu(-10)
+    assert calculator.f_relu(-100) == f'Result of function relu({-100}) = {max(0, -10)}'
 
 
 def test_sin_d():
-
-    assert math.cos(3.14 // 2) == derivatives.sin_d(3.14 // 2)
+    assert calculator.f_dsin(math.pi/ 2) == f'Result of function dsin({math.pi/2}) = {math.cos(math.pi/2)}'
 
 
 def test_cos_d():
-    assert -math.sin(3.14 // 2) == derivatives.cos_d(3.14 // 2)
+    assert calculator.f_dcos(math.pi/ 2) == f'Result of function dcos({math.pi/2}) = {-math.sin(math.pi /2)}'
 
 
 def test_tan_d():
-    assert 1-math.tan(3.14 // 2)**2 == derivatives.tan_d(3.14 // 2)
+    assert calculator.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {math.sec(math.pi / 4)**2}'
 
-
+"""
 def test_tanh_d():
     assert 1-(math.tanh(3.14 // 2)**2) == derivatives.tanh_d(3.14 // 2)
 
