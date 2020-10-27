@@ -5,7 +5,7 @@ def f_string(fn):
         kwargs_ = ['{0} = {1} '.format(k,v) for k , v in kwargs.items() ]
         all_args = args_ + kwargs_
         args_str = ",".join(all_args)
-        print(f'Result of function {fn.__name__[2:]}({args_str}) = {result}')
-        return result
+        f_result = f'Result of function {fn.__name__[2:]}({args_str}) = {result}')
+        return f_result
     return inner
 
