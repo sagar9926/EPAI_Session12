@@ -6,4 +6,4 @@ from .all_functions.tanh import f_dtanh
 from .all_functions.tan import f_dtan
 from .all_functions.sigmoid import f_dsigmoid
 from .all_functions.relu import f_drelu
-from .all_functions.softmax f_dsoftmax
+from .all_functions.softmax import f_dsoftmax
