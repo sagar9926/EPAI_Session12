@@ -43,14 +43,14 @@ def test_tanh():
 def test_log():
     assert calculator.f_log(1) == f'Result of function log({1}) = {math.log(1)}'
 
-"""
+
 def test_exp():
-    assert math.exp(10) == calculator.exp(10)
+    assert calculator.f_exp(1) == f'Result of function log({1}) = {math.exp(1)}'
 
 
 def test_sigmoid():
-    assert 1 / (1 + math.exp(-10)) == calculator.sigmoid(10)
-
+    assert calculator.f_sigmoid(2) == f'Result of function sigmoid({2}) = {1 / (1 + math.exp(-10))}'
+"""
 
 def test_relu():
     assert max(0, -10) == calculator.relu(-10)
