@@ -21,7 +21,7 @@ def test_readme_file_for_formatting():
     f = open("README.md", "r")
     content = f.read()
     f.close()
-    assert content.count("#") >= 10
+    assert content.count("#") >= 3
 
 def test_sin():
 
