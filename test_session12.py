@@ -8,52 +8,20 @@ import pytest
 import calculator
 from calculator import derivatives
 
-# generic tests
-
-
 def test_readme_exists():
     assert os.path.isfile("README.md"), "Put a README file, man!!"
 
 
-# def test_readme_contents():
-#     readme_words = [word for line in open("README.md", "r") for word in line]
-#     assert len(readme_words) >= 500, "Say more in the README. please....."
+def test_readme_contents():
+    readme_words = [word for line in open("README.md", "r") for word in line]
+    assert len(readme_words) >= 500, "Say more in the README. please....."
 
 
-# def test_readme_file_for_formatting():
-#     f = open("README.md", "r")
-#     content = f.rea_d()
-#     f.close()
-#     assert content.count("#") >= 10
-
-
-def test_indentations():
-    """ Returns pass if used four spaces for each level of syntactically \
-    significant indenting."""
-    lines = inspect.getsource(calculator)
-    spaces = re.findall("\n +.", lines)
-    for space in spaces:
-        assert len(space) % 4 == 2, "Your script contains misplaced indentations"
-        assert (
-            len(re.sub(r"[^ ]", "", space)) % 4 == 0
-        ), "Your code indentation does not follow PEP8 guidelines"
-
-
-def test_function_name_had_cap_letter():
-    functions = inspect.getmembers(calculator, inspect.isfunction)
-    for function in functions:
-        assert (
-            len(re.findall("([A-Z])", function[0])) == 0
-        ), "You have used Capital letter(s) in your function names"
-
-
-def test_function_has_annotations():
-    functions = inspect.getmembers(calculator, inspect.isfunction)
-    for _, function in functions:
-        assert (
-            function.__annotations__ is not {}
-        ), "You have to implement docstring for every function"
-
+def test_readme_file_for_formatting():
+    f = open("README.md", "r")
+    content = f.rea_d()
+    f.close()
+    assert content.count("#") >= 10
 
 def test_sin():
 
