@@ -31,19 +31,19 @@ def test_sin():
 def test_cos():
     assert calculator.f_cos(math.pi/ 2) == f'Result of function cos({math.pi/2}) = {math.cos(math.pi /2)}'
 
-"""
-def test_tan():
-    assert math.tan(3.14 // 2) == calculator.tan(3.14 // 2)
 
+def test_tan():
+    assert calculator.f_tan(math.pi/ 4) == f'Result of function tan({math.pi/4}) = {math.tan(math.pi / 4)}'
+
+ 
 
 def test_tanh():
-    assert math.tanh(3.14 // 2) == calculator.tanh(3.14 // 2)
-
+    assert calculator.f_tanh(math.pi/ 4) == f'Result of function tanh({math.pi/4}) = {math.tanh(math.pi / 4)}'
 
 def test_log():
-    assert math.log(math.exp(1)) == calculator.log(math.exp(1))
+    assert calculator.f_log(1) == f'Result of function log({1}) = {math.log(1)}'
 
-
+"""
 def test_exp():
     assert math.exp(10) == calculator.exp(10)
 
@@ -89,4 +89,5 @@ def test_sigmoid_d():
 def test_relu_d():
     assert 0 == derivatives.relu_d(-10)
     assert 1 == derivatives.relu_d(10000)
+
 """
