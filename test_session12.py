@@ -56,15 +56,15 @@ def test_relu():
 
 
 def test_sin_d():
-    assert calculator.f_dsin(math.pi/ 2) == f'Result of function dsin({math.pi/2}) = {math.cos(math.pi/2)}'
+    assert derivatives.f_dsin(math.pi/ 2) == f'Result of function dsin({math.pi/2}) = {math.cos(math.pi/2)}'
 
 
 def test_cos_d():
-    assert calculator.f_dcos(math.pi/ 2) == f'Result of function dcos({math.pi/2}) = {-math.sin(math.pi /2)}'
+    assert derivatives.f_dcos(math.pi/ 2) == f'Result of function dcos({math.pi/2}) = {-math.sin(math.pi /2)}'
 
 
 def test_tan_d():
-    assert calculator.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {math.sec(math.pi / 4)**2}'
+    assert derivatives.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {math.sec(math.pi / 4)**2}'
 
 """
 def test_tanh_d():
