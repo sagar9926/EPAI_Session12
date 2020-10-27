@@ -34,4 +34,4 @@ def f_dtan(arg : float) -> 'Derivative of Tangent of input argument' :
 
     """
 
-    return(math.sec(arg)**2)
+    return(1 + math.tan(arg)**2)
