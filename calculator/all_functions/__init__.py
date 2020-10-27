@@ -9,4 +9,4 @@ from .sin import *
 from .softmax import *
 
 __all__ = (cos.__all__ + exp.__all__ + log.__all__ + relu.__all__ + sigmoid.__all__ + sin.__all__ + 
-           tan.__all__ + softmax.__all__)
+           tan.__all__ + softmax.__all__ + tanh.__all__)
