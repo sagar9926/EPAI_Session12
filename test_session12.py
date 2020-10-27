@@ -55,30 +55,30 @@ def test_relu():
     assert calculator.f_relu(-100) == f'Result of function relu({-100}) = {max(0, -10)}'
 
 
-def test_sin_d():
+def test_dsin():
     assert derivatives.f_dsin(math.pi/ 2) == f'Result of function dsin({math.pi/2}) = {math.cos(math.pi/2)}'
 
 
-def test_cos_d():
+def test_dcos():
     assert derivatives.f_dcos(math.pi/ 2) == f'Result of function dcos({math.pi/2}) = {-math.sin(math.pi /2)}'
 
 
-def test_tan_d():
+def test_dtan():
     assert derivatives.f_dtan(math.pi/ 4) == f'Result of function dtan({math.pi/4}) = {(1 + math.tan(math.pi / 4)**2)}'
 
-def test_tanh_d():
+def test_dtanh():
     assert derivatives.f_dtanh(math.pi/ 4) == f'Result of function dtanh({math.pi/4}) = {1-(math.tanh(math.pi / 4)**2)}'
 
   
-def test_log_d():
-    assert derivatives.f_dlog(1) == f'Result of function dlog({1}) = {1}'
+def test_dlog():
+    assert derivatives.f_dlog(1) == f'Result of function dlog({1}) = {1.0}'
 
 
-def test_exp_d():
+def test_dexp():
     assert derivatives.f_dexp(10) == f'Result of function dexp({10}) = {math.exp(10)}'
 
 
-def test_relu_d():
+def test_drelu():
     derivatives.f_drelu(-10) == f'Result of function drelu({-10}) = {0}'
     derivatives.f_drelu(10) == f'Result of function drelu({10}) = {1}'
    
